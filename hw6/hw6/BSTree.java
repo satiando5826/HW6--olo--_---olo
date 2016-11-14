@@ -125,11 +125,13 @@ public class BSTree extends BTreePrinter {
     }
 
     public void doubleRotateFromLeft(Node y) {
-        // Do something
+        singleRotateFromRight(y.left);
+        singleRotateFromLeft(y);
     }
 
     public void doubleRotateFromRight(Node y) {
-        // Do something
+        singleRotateFromLeft(y.right);
+        singleRotateFromRight(y);
     }
 
     // You should have "root node deletion" in this function
